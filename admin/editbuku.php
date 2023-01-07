@@ -1,3 +1,9 @@
+<?php
+include "../koneksi.php";
+$sql = mysqli_query($connect, "select * from buku where id='$_GET[kode]'");
+$data = mysqli_fetch_array($sql); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,14 +29,14 @@
 		                }
 	                }
 	              ?>
-                <label>Kode buku</label>
-                <input type="text" class="input" name="kode">
+                <label>kode buku</label>
+                <input type="text" class="input" name="kode" value="<?php echo $data['kode']?>">
                 <label>Judul buku</label>
-                <input type="text" class="input" name="judulbuku">
+                <input type="text" class="input" name="judulbuku" value="<?php echo $data['judulbuku']?>">
                 <label>Nama penulis</label>
-                <input type="text" class="input" name="penulis">
+                <input type="text" class="input" name="penulis" value="<?php echo $data['penulis']?>">
                 <label>Tahun terbit</label>
-                <input type="text" class="input" name="tahunterbit">
+                <input type="text" class="input" name="tahunterbit" value="<?php echo $data['tahunterbit']?>">
                 <input type="submit" class="submit" name="submit">
 
             </form>
@@ -43,11 +49,12 @@
 <?php
 include "../koneksi.php";
 if(isset($_POST['submit'])){
-  mysqli_query($connect, "INSERT INTO buku set
+  mysqli_query($connect, "UPDATE buku set
   judulbuku = '$_POST[judulbuku]',
   penulis = '$_POST[penulis]',
   tahunterbit = '$_POST[tahunterbit]',
-  kode = '$_POST[kode]'") or die (mysqli_error($connect));
+  kode = '$_POST[kode]'
+  where id = '$_GET[kode]'") or die (mysqli_error($connect));
   header("location:admin.php");
 }
 

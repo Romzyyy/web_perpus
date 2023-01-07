@@ -30,6 +30,7 @@
             <table>
                 <tr>
                     <th>No</th>
+                    <th>Kode buku</th>
                     <th>Nama buku</th>
                     <th>Penulis</th>
                     <th>tahun terbit</th>
@@ -43,11 +44,12 @@
                 while ($tampil = mysqli_fetch_array($data)){
                     echo "<tr>
                     <td>$no</td>
+                    <td>$tampil[kode]</td>
                     <td>$tampil[judulbuku]</td>
                     <td>$tampil[penulis]</td>
                     <td>$tampil[tahunterbit]</td>
                     <td>
-                    <a href='ubahbuku.php?kode=$tampil[id]'>ubah</a>
+                    <a href='editbuku.php?kode=$tampil[id]'>ubah</a>
                     <a href='?kode=$tampil[id]'>hapus</a>
                     </td>
                    
