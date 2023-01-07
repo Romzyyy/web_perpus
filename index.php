@@ -12,13 +12,13 @@
 <body>
     <div class="navbar">
         <div class="navbrand">
-            <h2>Perpustakaan</h2>
+            <h2>Library</h2>
         </div>
         <div class="navlist">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#profile">Profile</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </div>
     </div>
