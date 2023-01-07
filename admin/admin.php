@@ -1,3 +1,10 @@
+<?php
+	session_start();
+ 
+	if($_SESSION['level']!=="admin"){
+		header("location:index.php?pesan=gagal");
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +19,7 @@
 <body>
     <div class="navbar">
         <div class="navbrand">
-            <h2>Admin</h2>
+            <h2><?php echo $_SESSION['username']?></h2>
         </div>
         <div class="navlist">
             <ul>

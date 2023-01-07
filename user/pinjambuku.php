@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+ 
+	if($_SESSION['level']!=="user"){
+		header("location:index.php?pesan=gagal");
+	}
+ 
+	?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +24,6 @@
                 <p>Pinjam Buku</p>
             </div>
             <form action="" method="post" class="form">
-                <?php 
-                if(isset($_GET['pesan'])){
-		        if($_GET['pesan']=="gagal"){
-			    echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
-		                }
-	                }
-	              ?>
                 <label>Nama</label>
                 <input type="text" class="input" name="nama">
                 <label>Judul buku</label>

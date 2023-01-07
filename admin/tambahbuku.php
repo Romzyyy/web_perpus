@@ -1,3 +1,10 @@
+<?php
+	session_start();
+ 
+	if($_SESSION['level']!=="admin"){
+		header("location:index.php?pesan=gagal");
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

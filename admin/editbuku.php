@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+if($_SESSION['level']!=="admin"){
+    header("location:index.php?pesan=gagal");
+}
 include "../koneksi.php";
 $sql = mysqli_query($connect, "select * from buku where id='$_GET[kode]'");
 $data = mysqli_fetch_array($sql); 
