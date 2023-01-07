@@ -16,12 +16,59 @@
         </div>
         <div class="navlist">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#profile">Profile</a></li>
+                <li><a href="#">Buku</a></li>
+                <li><a href="peminjam.php">Peminjam</a></li>
                 <li><a href="../logout.php">logout</a></li>
             </ul>
         </div>
     </div>
+    <div class="content">
+        <div class="contentTitle">
+            <h2>Data Buku</h2>
+        </div>
+        <div class="contentTable">
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Nama buku</th>
+                    <th>Penulis</th>
+                    <th>tahun terbit</th>
+                    <th>aksi</th>
+
+                </tr>
+                <?php
+                include "../koneksi.php";
+                $no = 1;
+                $data = mysqli_query($connect, "SELECT * from buku ") or die(mysqli_error($connect));
+                while ($tampil = mysqli_fetch_array($data)){
+                    echo "<tr>
+                    <td>$no</td>
+                    <td>$tampil[judulbuku]</td>
+                    <td>$tampil[penulis]</td>
+                    <td>$tampil[tahunterbit]</td>
+                    <td>
+                    <a href='ubahbuku.php?kode=$tampil[id]'>ubah</a>
+                    <a href='?kode=$tampil[id]'>hapus</a>
+                    </td>
+                   
+                </tr>";
+                $no++;
+                }
+                ?>
+
+            </table>
+            <button><a href="tambahbuku.php">Tambah</a></button>
+        </div>
+
+    </div>
 </body>
 
 </html>
+
+<?php
+include "../koneksi.php";
+if(isset($_GET['kode'])){
+    mysqli_query($connect, "DELETE from buku where id='$_GET[kode]'");
+    header("location:admin.php");
+}
+?>

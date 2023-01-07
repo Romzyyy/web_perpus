@@ -79,21 +79,3 @@
 .contentTable table tr td {
     height: 50px;
 }
-
-.contentTable table tr td a {
-    text-decoration: none;
-}
-
-button {
-    margin-top: 50px;
-    height: 40px;
-    width: 15%;
-    border-radius: 20px;
-    background-color: green;
-    font-size: 20px;
-}
-
-button a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
