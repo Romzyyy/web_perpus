@@ -3,7 +3,7 @@
 	if (isset($_SESSION['username'])) {
         if($_SESSION['level'] == "admin") {
           header('Location: admin/admin.php');
-        } else if($_SESSION['level'] == "guru") {
+        } else if($_SESSION['level'] == "user") {
           header('Location: user/user.php');
         }
         exit;
@@ -28,19 +28,12 @@
                 <p>Login</p>
             </div>
             <form action="ceklogin.php" method="post" class="form">
-                <?php 
-                if(isset($_GET['pesan'])){
-		        if($_GET['pesan']=="gagal"){
-			    echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
-		                }
-	                }
-	              ?>
                 <label for="username">Username</label>
                 <input type="text" class="input" name="username">
                 <label for="password">Password</label>
                 <input type="password" class="input" name="password">
                 <input type="submit" class="submit" name="submit">
-
+                <p>Don't have account? <a href="registrasi.php">Register</a></p>
             </form>
 
         </div>

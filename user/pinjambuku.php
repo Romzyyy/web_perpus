@@ -1,9 +1,3 @@
-<?php
-include "../koneksi.php";
-$sql = mysqli_query($connect, "select * from buku where id='$_GET[kode]'");
-$data = mysqli_fetch_array($sql); 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +13,7 @@ $data = mysqli_fetch_array($sql);
     <div class="container">
         <div class="card">
             <div class="title">
-                <p>Ubah Buku</p>
+                <p>Pinjam Buku</p>
             </div>
             <form action="" method="post" class="form">
                 <?php 
@@ -29,16 +23,13 @@ $data = mysqli_fetch_array($sql);
 		                }
 	                }
 	              ?>
-                <label>kode buku</label>
-                <input type="text" class="input" name="kode" value="<?php echo $data['kode']?>">
+                <label>Nama</label>
+                <input type="text" class="input" name="nama">
                 <label>Judul buku</label>
-                <input type="text" class="input" name="judulbuku" value="<?php echo $data['judulbuku']?>">
-                <label>Nama penulis</label>
-                <input type="text" class="input" name="penulis" value="<?php echo $data['penulis']?>">
-                <label>Tahun terbit</label>
-                <input type="text" class="input" name="tahunterbit" value="<?php echo $data['tahunterbit']?>">
+                <input type="text" class="input" name="judulbuku">
+                <label>Kode Buku</label>
+                <input type="text" class="input" name="kode">
                 <input type="submit" class="submit" name="submit">
-
             </form>
 
         </div>
@@ -49,13 +40,11 @@ $data = mysqli_fetch_array($sql);
 <?php
 include "../koneksi.php";
 if(isset($_POST['submit'])){
-  mysqli_query($connect, "UPDATE buku set
+  mysqli_query($connect, "INSERT INTO peminjam set
+    nama = '$_POST[nama]',
   judulbuku = '$_POST[judulbuku]',
-  penulis = '$_POST[penulis]',
-  tahunterbit = '$_POST[tahunterbit]',
-  kode = '$_POST[kode]'
-  where id = '$_GET[kode]'") or die (mysqli_error($connect));
-  header("location:admin.php");
+  kode = '$_POST[kode]'") or die (mysqli_error($connect));
+  header("location:userpinjam.php");
 }
 
 ?>

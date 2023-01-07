@@ -49,3 +49,12 @@
     color: white;
     cursor: pointer;
 }
+
+form p {
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}

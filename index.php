@@ -31,7 +31,7 @@
     </div>
     <div class="card" id="profile">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#2C3639" fill-opacity="1"
+            <path fill="#473E2A" fill-opacity="1"
                 d="M0,224L120,197.3C240,171,480,117,720,128C960,139,1200,213,1320,250.7L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
             </path>
             <div class="cardName">
