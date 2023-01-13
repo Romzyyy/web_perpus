@@ -1,7 +1,7 @@
 <?php 
 	session_start();
  
-	if($_SESSION['level']!=="siswa"){
+	if($_SESSION['level']!=="user"){
 		header("location:index.php?pesan=gagal");
 	}
  

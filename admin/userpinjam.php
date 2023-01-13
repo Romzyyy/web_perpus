@@ -54,7 +54,7 @@
                     <td>$tampil[judulbuku]</td>
                     <td>$tampil[kode]</td>
                     <td>
-                    <a href='editbuku.php?kode=$tampil[id]'>ubah</a>
+                    <a href='editpinjam.php?kode=$tampil[id]'>ubah</a>
                     <a href='?kode=$tampil[id]'>hapus</a>
                     </td>
                    
