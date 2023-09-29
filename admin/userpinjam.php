@@ -74,7 +74,7 @@
 <?php
 include "../koneksi.php";
 if(isset($_GET['kode'])){
-    mysqli_query($connect, "DELETE from buku where id='$_GET[kode]'");
-    header("location:admin.php");
+    mysqli_query($connect, "DELETE from peminjam where id='$_GET[kode]'");
+    header("location:userpinjam.php");
 }
 ?>

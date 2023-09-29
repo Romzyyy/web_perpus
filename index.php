@@ -24,8 +24,8 @@
     </div>
     <div class="thumbnail">
         <div class="thumb-text">
-            <h1>Library</h1>
-            <h2>Universitay Bahaudin Mudhary Madura</h2>
+            <h1>Uniba Library</h1>
+            <h2>Kh Bahaudin Mudhary Madura University</h2>
         </div>
         </svg>
     </div>
@@ -36,7 +36,7 @@
             </path>
             <div class="cardName">
                 <div class="cardTitle">
-                    <h1>Porfile Librari</h1>
+                    <h1>Library Profile</h1>
                 </div>
             </div>
             <div class="cardDesc">
@@ -67,7 +67,6 @@
                             Menyebarkan informasi secara efektif dan efisien</p>
                     </div>
                 </div>
-
             </div>
         </svg>
     </div>
@@ -80,7 +79,7 @@
             <p>Email: perpustakaan@unibamadura.ac.id</p>
         </div>
         <div class="footerName">
-            <p>made with &hearts; by thirteen</p>
+            <p>made with &hearts; by si.b</p>
         </div>
     </div>
 </body>

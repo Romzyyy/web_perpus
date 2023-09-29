@@ -100,6 +100,7 @@
 .cardDesc .desc {
     margin: 0 50px;
     line-height: 30px;
+    text-align: justify;
 }
 .cardDesc .desc h1 {
     padding: 20px 0;
@@ -115,6 +116,11 @@
     padding: 20px 0;
     font-weight: 100;
     text-align: center;
+}
+
+.visi,
+.misi p {
+    text-align: justify;
 }
 
 .footer {

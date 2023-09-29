@@ -35,9 +35,7 @@
                 <input type="submit" class="submit" name="submit">
                 <p>Don't have account? <a href="registrasi.php">Register</a></p>
             </form>
-
         </div>
     </div>
 </body>
-
 </html>
